@@ -1,0 +1,29 @@
+@import 'nav';
+//putting in variables for later use
+$cl: 3pt solid#000000;
+$m: 0 auto;
+$p: 10px;
+$fs: 40px;
+@mixin bg($br, $m, $w, $h){ //setting up a div to make a circle
+	border-radius: $br;
+	margin: $m;
+	border: $cl;
+	width: $w;
+	height: $h;
+}
+
+.circle{@include bg(50%, 40px, 120px, 120px)};//giving the mixin values
+a{ //just there to make the link a bit more noticeable
+	font-size: $fs;
+}
+#p{ //giving some style and space to the p element
+	margin-top: $m;
+	color: orange;
+	padding: $p;
+}
+
+p{
+	@extend a;
+}
+
+
